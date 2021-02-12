@@ -16,5 +16,4 @@ xlabel([method,'-',num2str(1)],'FontName','Arail','FontSize',10)
 ylabel([method,'-',num2str(2)],'FontName','Arail','FontSize',10)
 set(gca,'xticklabel',[]);
 set(gca,'yticklabel',[]);
-legend off;
 box off;
