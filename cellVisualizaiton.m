@@ -1,8 +1,8 @@
-function cellVisualizaiton(cell_coords,clust,term,colors,title_name,method)
+function cellVisualizaiton(cell_coords,clust,term,colors,title_name,method,out_path)
 if isempty(colors)
     colors = generateColors(max(length(unique(clust)),length(unique(term))));
 end
-figure;
+cell_figure = figure;
 if ~isempty(clust) && ~isempty(term)
     bubbleplot(cell_coords(:,1),cell_coords(:,2),[],6,clust,term,'ColorMap',colors);
 elseif ~isempty(term)
@@ -17,3 +17,4 @@ ylabel([method,'-',num2str(2)],'FontName','Arail','FontSize',10)
 set(gca,'xticklabel',[]);
 set(gca,'yticklabel',[]);
 box off;
+saveas(cell_figure, out_path);
