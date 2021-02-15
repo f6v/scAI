@@ -10,7 +10,7 @@ dlmwrite(fullfile(filefolder,'species.csv'),species,'delimiter', '')
 dlmcell(fullfile(filefolder,'factor_genes.txt'),marker_genes)
 
 % Calling R
-RscriptFileName = ' ./search_for_regions.R ';
+RscriptFileName = ' ../scAI/search_for_regions.R ';
 eval([' system([', '''', Rscript, RscriptFileName, '''', ' filefolder]);']);
 
 Loci_genes = readtable(fullfile(filefolder,'factor_genes_loci.txt'),'ReadVariableNames',false);
