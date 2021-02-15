@@ -1,9 +1,8 @@
-function [motifs_database,motif_matrix] = run_chromVAR(ATAC,factor_loci)
+function [motifs_database,motif_matrix] = run_chromVAR(X, Loci, Cells,factor_loci)
 
 Rscript = '"Rscript"';
 filefolder = 'intermediateFiles';
 
-X = table2array(ATAC); Loci = ATAC.Properties.RowNames; Cells = ATAC.Properties.VariableNames;
 
 if iscell(factor_loci{1,1})
     K = length(factor_loci);
