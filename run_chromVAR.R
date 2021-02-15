@@ -37,8 +37,8 @@ else
 }}
 
 # Setting multiprocessing options
-library(BiocParallel)
-register(MulticoreParam(2)) # Use 2 cores
+#library(BiocParallel)
+#register(MulticoreParam(2)) # Use 2 cores
 
 peakfile <- paste(baseName, "loci_for_chromVAR.bed", sep="/") # filename of bed file
 peaks <- getPeaks(peakfile, sort_peaks = FALSE)
