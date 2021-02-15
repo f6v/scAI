@@ -55,7 +55,7 @@ end
 dlmcell(fullfile(filefolder,'loci_for_chromVAR.bed'),Peaks);  
 
 % Calling R
-RscriptFileName = ' ./run_chromVAR.R ';
+RscriptFileName = ' ../scAI/run_chromVAR.R ';
 eval([' system([', '''', Rscript, RscriptFileName, '''', ' filefolder]);']);
 
 motifs_database = readtable(fullfile(filefolder,'chromVAR_motif_names.txt'),'ReadRowNames',1);
