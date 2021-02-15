@@ -1,10 +1,5 @@
-function marker_genes_loci = search_gene_loci(marker_genes,system_used,species)
-% Replace the following line by the appropriate path for Rscript
-if strcmp(system_used,'Windows')
-    Rscript = '"C:\Program Files\R\R-3.5.1\bin\Rscript"'; % for 64-bit windows
-elseif strcmp(system_used,'Mac')
-    Rscript = '"/usr/local/bin/Rscript"'; % for Mac OS
-end
+function marker_genes_loci = search_gene_loci(marker_genes,species)
+Rscript = '"Rscript"';
 
 filefolder = 'intermediateFiles';
 if ~isfolder(filefolder)
