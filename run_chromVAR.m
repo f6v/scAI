@@ -1,11 +1,6 @@
-function [motifs_database,motif_matrix] = run_chromVAR(ATAC,factor_loci,system_used)
+function [motifs_database,motif_matrix] = run_chromVAR(ATAC,factor_loci)
 
-% Replace the following line by the appropriate path for Rscript
-if strcmp(system_used,'Windows')
-    Rscript = '"C:\Program Files\R\R-3.5.1\bin\Rscript"'; % for 64-bit windows
-elseif strcmp(system_used,'Mac')
-    Rscript = '"/usr/local/bin/Rscript"'; % for Mac OS
-end
+Rscript = '"Rscript"';
 filefolder = 'intermediateFiles';
 
 X = table2array(ATAC); Loci = ATAC.Properties.RowNames; Cells = ATAC.Properties.VariableNames;

@@ -17,9 +17,12 @@
 args <- commandArgs()
 baseName <- args[6]
 
-library(chromVAR)
-library(motifmatchr)
+lib_path <- "/data/gent/vo/000/gvo00027/multimodal_omics_GRN/lib"
+
 library(SummarizedExperiment)
+library(chromVAR, lib = lib_path)
+library(motifmatchr, lib = lib_path)
+library(JASPAR2016, lib = lib_path)
 
 infile0 <- paste(baseName, "species.csv", sep="/")
 project_species <- read.table(file = infile0)
